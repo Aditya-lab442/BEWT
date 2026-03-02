@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        inp1 = parseInt(prompt("Enter number 1:"));
+        inp2 = parseInt(prompt("Enter number 2:"));
+        
+        for (i = inp1; i < inp2; i++) {
+            flag=0
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                document.write("<h1>"+i+"</h1>")
+            }
+        }
+    </script>
+</body>
+
+</html>

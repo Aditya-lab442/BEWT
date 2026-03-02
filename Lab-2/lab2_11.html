@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="print()">CLICK</button>
+
+    <script>
+        // document.write("<input id='abc' type='checkbox'>")
+        for (i = 101; i < 111; i++) {
+            document.write("<input id='" + i + "' type='checkbox' value='" + i + "''>" + i + "<br/>")
+        }
+        let str=""
+
+        function print() {
+            for (i = 101; i < 111; i++) {
+                a = document.getElementById(""+i+"")
+                if (a.checked) {
+                    // alert("Hello"+i)
+                    str =str + i + ","
+                //    document.write(i + ",")
+                }
+                // console.log(a)
+            }
+            document.write(str)
+        }
+
+    </script>
+</body>
+
+</html>

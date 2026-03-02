@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="events(event)">CLICK ME</button>
+    <script>
+        document.addEventListener("contextmenu", e => { e.preventDefault() })
+        
+        document.addEventListener("mousedown", e => {
+            if (e.button === 0) {
+                document.write("<h1>Left Click</h1>")
+            } if (e.button === 2) {
+                document.write("<h1>Right Click</h1>")
+            } if (e.button === 1) {
+                document.write("<h1>Middle Click</h1>")
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+
+            getDetails() {
+                return `This is a ${this.year} ${this.make} ${this.model}.`;
+            }
+        }
+
+        
+        const myCar = new Car("Toyota", "Camry", 2023);
+        const anotherCar = new Car("Honda", "Civic", 2024);
+
+        console.log(myCar.getDetails()); 
+        console.log(anotherCar.getDetails()); 
+    </script>
+</body>
+
+</html>
