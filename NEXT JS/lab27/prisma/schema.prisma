@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model student {
+  StudentID         Int      @id
+  StuName           String   @db.VarChar(100)
+  StuEmail          String?  @db.VarChar(100)
+  StuPhone          String?  @db.VarChar(15)
+  StuDepartment     String   @db.VarChar(50)
+  StuDateOfBirth    DateTime @db.Date
+  StuEnrollmentYear Int
+}
